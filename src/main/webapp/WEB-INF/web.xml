@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+    <!-- 解决乱码问题 -->
+    <!-- forceEncoding默认为false,此时效果可大致理解为request.setCharacterEncoding("UTF-8") -->
+    <!-- forceEncoding=true后,可大致理解为request.setCharacterEncoding("UTF-8")和response.setCharacterEncoding("UTF-8") -->
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <async-supported>true</async-supported>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- PageOffice Begin -->
+
+    <servlet>
+        <servlet-name>poserver</servlet-name>
+        <servlet-class>com.zhuozhengsoft.pageoffice.poserver.Server</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>poserver</servlet-name>
+        <url-pattern>/poserver.zz</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>poserver</servlet-name>
+        <url-pattern>/poserver.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>poserver</servlet-name>
+        <url-pattern>/pageoffice.cab</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>poserver</servlet-name>
+        <url-pattern>/popdf.cab</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>poserver</servlet-name>
+        <url-pattern>/sealsetup.exe</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>adminseal</servlet-name>
+        <servlet-class>com.zhuozhengsoft.pageoffice.poserver.AdminSeal
+        </servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>adminseal</servlet-name>
+        <url-pattern>/adminseal.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminseal</servlet-name>
+        <url-pattern>/loginseal.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminseal</servlet-name>
+        <url-pattern>/sealimage.do</url-pattern>
+    </servlet-mapping>
+
+    <mime-mapping>
+        <extension>mht</extension>
+        <mime-type>message/rfc822</mime-type>
+    </mime-mapping>
+
+    <context-param>
+        <param-name>adminseal-password</param-name>
+        <param-value>123456</param-value>
+    </context-param>
+
+    <!-- PageOffice End -->
+    <!-- Processes application requests -->
+    <servlet>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath*:spring/*.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+        <async-supported>true</async-supported>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <!-- Disables Servlet Container welcome file handling. Needed for compatibility with Servlet 3.0 and Tomcat 7.0 -->
+    <welcome-file-list>
+        <welcome-file>/WEB-INF/views/user/login.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>

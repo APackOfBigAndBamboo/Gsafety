@@ -1,0 +1,123 @@
+body {
+    /*background-image: url(../img/old-paper.jpg);*/
+    /*background-color: #afcbff;*/
+    /*background-image: url("../img/plief.jpg");*/
+    /*position:absolute;width:100%;height:100%;*/
+}
+
+/*body.login{*/
+/*!*background-image: url(../);*!*/
+/*}*/
+.navbar-static-top {
+    margin-bottom: 19px;
+}
+
+/*
+ * Footer
+ */
+.footer {
+    bottom: 0;width:100%;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    padding: 20px;
+    color: #999;
+    text-align: center;
+    background-color: #f9f9f9;
+    clear: both;
+
+}
+
+.footer p:last-child {
+    margin-bottom: 0;
+}
+
+.form-signin-body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /*background-color: #4F4F4F;*/
+    /*background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508733547390&di=965da6d1c535b8030c9ae8987c8ad5e0&imgtype=jpg&src=http%3A%2F%2Fimg1.imgtn.bdimg.com%2Fit%2Fu%3D3879271915%2C4075076706%26fm%3D214%26gp%3D0.jpg");*/
+
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+    font-weight: normal;
+}
+
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.tab-content {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+/*==========以下部分是Validform必须的===========*/
+.Validform_checktip{
+    margin-left:8px;
+    line-height:20px;
+    height:20px;
+    overflow:hidden;
+    color:#999;
+    font-size:12px;
+}
+.Validform_right{
+    color:#71b83d;
+    padding-left:20px;
+    background:url(../images/right.png) no-repeat left center;
+}
+.Validform_wrong{
+    color:red;
+    padding-left:20px;
+    white-space:nowrap;
+    background:url(../images/error.png) no-repeat left center;
+}
+.Validform_loading{
+    padding-left:20px;
+    background:url(../images/onLoad.gif) no-repeat left center;
+}
+.Validform_error{
+    background-color:#ffe7e7;
+}
+#Validform_msg{color:#7d8289; font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; width:280px; -webkit-box-shadow:2px 2px 3px #aaa; -moz-box-shadow:2px 2px 3px #aaa; background:#fff; position:absolute; top:0px; right:50px; z-index:99999; display:none;filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');}
+#Validform_msg .iframe{position:absolute; left:0px; top:-1px; z-index:-1;}
+#Validform_msg .Validform_title{line-height:25px; height:25px; text-align:left; font-weight:bold; padding:0 8px; color:#fff; position:relative; background-color:#000;}
+#Validform_msg a.Validform_close:link,#Validform_msg a.Validform_close:visited{line-height:22px; position:absolute; right:8px; top:0px; color:#fff; text-decoration:none;}
+#Validform_msg a.Validform_close:hover{color:#cc0;}
+#Validform_msg .Validform_info{padding:8px;border:1px solid #000; border-top:none; text-align:left;}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.david.hellossm.mappers.StudentMapper">
+    <resultMap id="StudentResultWithObjects" type="com.david.hellossm.models.Student">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="mobile" column="mobile"/>
+        <result property="email" column="email" />
+        <result property="birthday" column="birthday" />
+        <result property="genderId" column="gender_id"/>
+        <result property="gender.id" column="gender_id"/>
+        <result property="gender.name" column="gender_name"/>
+    </resultMap>
+    <!--<select id="getStudentAll" resultMap="StudentResult">-->
+        <!--SELECT * FROM student-->
+    <!--</select>-->
+    <!--<select id="getStudentById" parameterType="int" resultMap="StudentResult">-->
+        <!--SELECT * FROM student WHERE id = #{id}-->
+    <!--</select>-->
+    <!--<update id="update" parameterType="com.northgatecode.hellossm.models.Student">-->
+        <!--UPDATE student SET name = #{name}, mobile = #{mobile}, email = #{email} WHERE id = #{id}-->
+    <!--</update>-->
+    <!--<insert id="insert" parameterType="com.northgatecode.hellossm.models.Student">-->
+        <!--INSERT INTO student (name, mobile, email) VALUES (#{name}, #{mobile}, #{email})-->
+    <!--</insert>-->
+    <!--<delete id="delete" parameterType="int">-->
+        <!--DELETE FROM student WHERE id = #{id}-->
+    <!--</delete>-->
+</mapper>
