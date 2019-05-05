@@ -12,7 +12,7 @@ public class JDBCGetNeedToDisableEmail {
     }
 
     private static final String SQLSERVER_DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-    private static final String SQLSERVER_URL = "jdbc:sqlserver://192.168.29.13:1433;databaseName=U8CRM";
+    private static final String SQLSERVER_URL = "";
 
     // 注册数据库驱动
     static {
@@ -27,7 +27,7 @@ public class JDBCGetNeedToDisableEmail {
     // 获取连接
     public static Connection getConn() throws SQLException {
         String url = SQLSERVER_URL;
-        return DriverManager.getConnection(url, "mailsystem", "Gsafety.com.123");
+        return DriverManager.getConnection(url, "", "");
     }
 
     // 关闭连接
